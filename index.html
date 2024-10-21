@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>global email sender</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Roboto mono';
+            background-color: rgb(30, 27, 27);
+            color: white;
+        }
+
+        form {
+            padding: 1rem;
+            background-color: rgb(60, 59, 59);
+            border-radius: 1rem;
+            width: 40%;
+
+        }
+
+        input,
+        textarea {
+            margin-top: 0.3rem;
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.4rem;
+            font-family: 'Roboto mono';
+
+
+        }
+
+        input:focus,
+        textarea:focus {
+            border: none;
+            background-color: rgb(243, 243, 255);
+            outline: none;
+
+        }
+
+
+        textarea {
+            margin-bottom: 0 !important;
+
+        }
+
+        button {
+            background-color: crimson;
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            color: white;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            background-color: rgb(195, 14, 50);
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+
+        h1 {
+            color: white;
+        }
+
+        #success-msg {
+            color: rgb(3, 230, 3);
+            display: none;
+            margin-top: -0.5rem;
+        }
+
+        #error-msg {
+            color: rgb(255, 0, 0);
+            display: none;
+            margin-top: -0.5rem;
+
+        }
+
+        .active-response {
+            display: block !important;
+        }
+
+        #file {
+
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper.one {
+            background-color: #1a1a1a;
+        }
+
+        .drop-main {
+            display: flex;
+            font-size: 3rem;
+            margin: 1.5rem;
+            justify-content: center;
+            font-family: "Roboto mono";
+            color: white;
+        }
+
+        .g {
+            opacity: 0;
+            animation: drop 0.4s linear forwards;
+
+        }
+
+        .l1 {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.05s;
+
+        }
+
+        .o {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.10s;
+
+        }
+
+        .b {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.15s;
+
+        }
+
+        .a1 {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.20s;
+
+        }
+
+        .l2 {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.25s;
+
+        }
+
+
+
+
+
+
+
+
+        .e1 {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.30s;
+            margin-left: 0.7rem;
+        }
+
+        .m {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.35s;
+
+        }
+
+        .a2 {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.40s;
+
+        }
+
+        .i {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.45s;
+
+        }
+
+        .l3 {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.50s;
+
+        }
+
+
+
+
+
+
+
+        .s {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.55s;
+            margin-left: 0.7rem;
+
+        }
+
+        .e2 {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.60s;
+
+        }
+
+        .n {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.65s;
+
+        }
+
+        .d {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.70s;
+
+        }
+
+        .e3 {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.75s;
+
+        }
+
+        .r {
+            opacity: 0;
+            animation: drop 0.4s linear forwards 0.80s;
+
+        }
+
+        @keyframes drop {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+
+            65% {
+                transform: translateY(-13px);
+                opacity: 1;
+            }
+
+            75% {
+                transform: translateY(-18px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="drop-main">
+        <div class="g">G</div>
+        <div class="l1">L</div>
+        <div class="o">O</div>
+        <div class="b">B</div>
+        <div class="a1">A</div>
+        <div class="l2">L</div>
+
+
+        <div class="e1">E</div>
+        <div class="m">M</div>
+        <div class="a2">A</div>
+        <div class="i">I</div>
+        <div class="l3">L</div>
+
+        <div class="s">S</div>
+        <div class="e2">E</div>
+        <div class="n">N</div>
+        <div class="d">D</div>
+        <div class="e3">E</div>
+        <div class="r">R</div>
+
+    </div>
+
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="your name" required><br>
+
+        <label for="useremail"> Your Email:</label>
+        <input type="email" id="useremail" name="useremail" placeholder="your email" required><br>
+
+        <label for="recieveremail"> Receiver Email:</label>
+        <input type="email" id="recieveremail" name="recieveremail" placeholder="reciever's email address" required><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" placeholder="type you message here..." required></textarea><br>
+
+        <input type="file" id="file" name="file" accept="image/*"><br>
+
+        <p id="success-msg">*Email sent successfully</p>
+        <p id="error-msg">*Email cannot be sended ! (please retry)</p>
+        <button type="submit">Send</button>
+
+    </form>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('input', () => {
+            const errormsg = document.getElementById('error-msg');
+            const successmsg = document.getElementById('success-msg');
+
+            errormsg.classList.remove('active-response')
+            successmsg.classList.remove('active-response')
+
+
+        })
+
+
+
+
+
+
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+
+
+            const formData = new FormData(this);
+            fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        const errormsg = document.getElementById('error-msg');
+                        const successmsg = document.getElementById('success-msg');
+
+                        errormsg.classList.remove('active-response')
+                        successmsg.classList.add('active-response')
+                    } else {
+                        const successmsg = document.getElementById('success-msg');
+                        const errormsg = document.getElementById('error-msg');
+
+                        successmsg.classList.remove('active-response')
+                        errormsg.classList.add('active-response')
+                    }
+                })
+                .catch(error => {
+                    const errorMsg = document.getElementById('error-msg');
+                    errorMsg.textContent = error
+                    errorMsg.classList.add('active-response');
+
+                });
+        });
+    </script>
+</body>
+
+</html>
