@@ -334,7 +334,7 @@
 
 
             const formData = new FormData(this);
-            fetch('http://localhost:3000/send-email', {
+            fetch('https://email-sender-backend-q2ud.onrender.com/send-email', {
                 method: 'POST',
                 body: formData
             })
