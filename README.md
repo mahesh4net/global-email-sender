@@ -8,7 +8,11 @@ With just a few clicks, you can compose your message, attach files, and send it 
 Key Features:
 
 User-Friendly Interface: Effortlessly navigate through the email-sending process, making communication quick and hassle-free.
+
 File Attachments: Easily attach files to your emails, ensuring you can share important documents and images seamlessly.
+
 Secure Delivery: Your privacy is our priority. We utilize secure protocols to protect your data and ensure safe transmission.
+
 Global Reach: Connect with anyone around the world, bridging distances and making communication easier than ever.
-Join the Global Email Sender community today and experience the future of email communication
+
+Join the Global Email Sender community today and experience the future of email communication !
