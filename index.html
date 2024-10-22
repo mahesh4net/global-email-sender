@@ -80,6 +80,13 @@
         }
 
 
+        button:disabled{
+            cursor: not-allowed;
+            background-color: rgb(127, 15, 37);
+            color: rgb(189, 189, 189);
+        }
+
+
         h1 {
             color: white;
         }
@@ -308,7 +315,7 @@
 
         <p id="success-msg">*Email sent successfully</p>
         <p id="error-msg">*Email cannot be sended ! (please retry)</p>
-        <button type="submit">Send</button>
+        <button type="submit" id="submit">Send</button>
 
     </form>
 
@@ -330,7 +337,9 @@
 
         document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault();
-
+            const sendbtn = document.getElementById('submit')
+            sendbtn.disabled = true
+            sendbtn.textContent = 'sending...'
 
 
             const formData = new FormData(this);
@@ -343,11 +352,17 @@
                         const errormsg = document.getElementById('error-msg');
                         const successmsg = document.getElementById('success-msg');
 
+                        sendbtn.disabled = false
+                        sendbtn.textContent = 'Send'
+
                         errormsg.classList.remove('active-response')
                         successmsg.classList.add('active-response')
                     } else {
                         const successmsg = document.getElementById('success-msg');
                         const errormsg = document.getElementById('error-msg');
+
+                        sendbtn.disabled = false
+                        sendbtn.textContent = 'Try again'
 
                         successmsg.classList.remove('active-response')
                         errormsg.classList.add('active-response')
