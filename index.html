@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>global email sender</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -12,19 +16,19 @@
             padding: 0;
         }
 
-        :root{
-          font-size: 16px;
-       }
+        :root {
+            font-size: 16px;
+        }
 
         body {
-           
+
             width: 100vw;
             min-height: 100vh;
             display: flex;
-            justify-content: center;
+
             align-items: center;
             flex-direction: column;
-            font-family: 'Roboto mono';
+            font-family: 'Roboto Mono';
             background-color: rgb(30, 27, 27);
             color: white;
         }
@@ -281,114 +285,110 @@
 
 
 
-       @media (max-width: 2000px){
-       :root{
-          font-size: 16px;
-       }
-       
-        form{
-        width: 40%;
-       }
+        @media (max-width: 2000px) {
+            :root {
+                font-size: 16px;
+            }
 
-       }
+            form {
+                width: 40%;
+            }
 
-       @media (max-width: 1440px){
-       :root{
-          font-size: 15px;
-       }
-       
-        form{
-        width: 40%;
-       }
+        }
 
-       }
+        @media (max-width: 1440px) {
+            :root {
+                font-size: 15px;
+            }
 
-       @media (max-width: 1024px){
-       :root{
-          font-size: 14px;
-       }
-       
-        form{
-        width: 50%;
-       }
+            form {
+                width: 40%;
+            }
 
-       }
+        }
 
-       @media (max-width: 768px){
-       :root{
-          font-size: 13px;
-       }
-       
-        form{
-        width: 60%;
-       }
+        @media (max-width: 1024px) {
+            :root {
+                font-size: 14px;
+            }
 
-       }
+            form {
+                width: 50%;
+            }
 
-       @media (max-width: 625px){
-       :root{
-          font-size: 13px;
-       }
-       
-        form{
-        width: 70%;
-       }
+        }
 
-       }
+        @media (max-width: 768px) {
+            :root {
+                font-size: 13px;
+            }
 
-       @media (max-width: 426px){
+            form {
+                width: 60%;
+            }
 
-       :root{
-          font-size: 13px;
-       }
+        }
 
-      
-       
-       .drop-main{
-        font-size: 2.5rem;
-       }
-       
-        form{
-        width: 90%;
-       }
+        @media (max-width: 625px) {
+            :root {
+                font-size: 13px;
+            }
 
-       }
+            form {
+                width: 70%;
+            }
 
-       @media (max-width: 376px){
+        }
 
-       :root{
-          font-size: 13px;
-       }
+        @media (max-width: 426px) {
 
-       .drop-main{
-        font-size: 2.2rem;
-       }
-
-        form{
-        width: 90%;
-       }
-
-       }
-
-       @media (max-width: 321px){
-
-       :root{
-          font-size: 12px;
-       }
-
-       .drop-main{
-        font-size: 1.5rem;
-       }
-
-        form{
-        width: 95%;
-       }
-
-       }
+            :root {
+                font-size: 13px;
+            }
 
 
 
+            .drop-main {
+                font-size: 2.5rem;
+            }
 
+            form {
+                width: 90%;
+            }
+
+        }
+
+        @media (max-width: 376px) {
+
+            :root {
+                font-size: 13px;
+            }
+
+            .drop-main {
+                font-size: 2.2rem;
+            }
+
+            form {
+                width: 90%;
+            }
+
+        }
+
+        @media (max-width: 321px) {
+
+            :root {
+                font-size: 12px;
+            }
+
+            .drop-main {
+                font-size: 1.5rem;
+            }
+
+            form {
+                width: 95%;
+            }
+
+        }
     </style>
 
 </head>
@@ -495,11 +495,11 @@
 
                 })
                 .finally(() => {
-                    
+
                     sendbtn.disabled = false;
                     sendbtn.textContent = 'Send';
 
-                    
+
                     document.getElementById('recieveremail').value = '';
                     document.getElementById('message').value = '';
                 });
